@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 4</strong> - Help Pythagoras Junior</h2>
+	<style>
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+</style>
+
+<p>
+	<img style="display: block; margin: 40px auto" src="../resources/img/triangles.jpg" alt="triangles">
+</p>
+
+<p>Pythagoras Junior is not a great mathematician like his great great great grandfather. When he gets a list of numbers, he finds it hard to match 3 numbers and create a triangle out of them.</p>
+
+<p>You need to help Pythagoras Junior to identify which is the smallest possible triangle given a list of side lengths. We define the smallest triangle as the one with the minimum perimeter.</p>
+
+<h3>Input</h3>
+<p>The first line will contain an integer <b>C</b>, the number of cases for our problem.<br>
+Each case consists of a line starting with an integer <b>N</b>, the number of sides, followed by <b>N</b> integers, each indicating the length of a side. All the integers are separated by spaces.</p>
+
+<h3>Output</h3>
+<p>For each case, a line starting with "Case #x: " followed by the perimeter of the smallest triangle or, if it's not possible to form a valid triangle, "IMPOSSIBLE". Every line is followed by a new line character.</p>
+
+<h3>Examples</h3>
+
+<table style="width:100%"><tbody><tr>
+<td><pre>Case 1:
+
+6 13 9 1 13 17 6
+
+</pre></td><td><pre>Case 2:
+
+7 110 40 10 1 20 60 3
+
+</pre></td></tr></tbody></table>
+<p>In Case 1, the answer is 27, as the triangle with the smallest perimeter is (13, 13, 1).<br>
+In Case 2, the answer is IMPOSSIBLE. You cannot create a valid triangle from any three of the given numbers.<br></p>
+
+
+<h3>Limits</h3>
+<ul>
+<li>3 ≤ <b>N</b> ≤ 10<sup>5</sup></li>
+<li>1 ≤ Lengths ≤ 2<sup>32</sup></li>
+</ul>
+
+<h3>Sample Input</h3>
+<pre>2
+6 13 9 1 13 17 6
+7 110 40 10 1 20 60 3</pre>
+
+<h3>Sample Output</h3>
+<pre>Case #1: 27
+Case #2: IMPOSSIBLE</pre>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

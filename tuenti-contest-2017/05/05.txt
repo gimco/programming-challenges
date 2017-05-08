@@ -1,0 +1,67 @@
+# Ghost in the HTTP
+
+Realiznado la petición a /ghots vemos que la conexión se corta a los 13 bytes.
+Revisando las cabeceras vemos que el servidor acepta la cabecera Range y que informa que el tamaño del recurso es 3445.
+
+~~~
+GET /ghost HTTP/1.0
+
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Content-Length: 3445
+Content-Type: text/plain; charset=utf-8
+Last-Modified: Mon, 24 Apr 2017 11:13:13 GMT
+Date: Thu, 27 Apr 2017 10:27:07 GMT
+
+iVBORw0KGgoAAclosed
+~~~
+
+Con curl realizamos las peticiones para reconstruir el recurso al completo:
+
+~~~
+for r in $(seq 0 13 3445); do \
+	curl -v -k  https://52.49.91.111:8443/ghost -r "$r-" >> ghost.b64 \
+done
+~~~
+
+base64 -d ghost.b64 > ghost
+
+El fichero es un base64 que al decoficarlo obtenemos un png con el siguiente texto:
+
+
+4017-8120
+
+
+Se hacemos la petición a ese rango obtenemos el siguiente mensaje:
+
+
+~~~
+curl -v -k https://52.49.91.111:8443/ghost -r 4017-8120
+
+> GET /ghost HTTP/1.1
+> Host: 52.49.91.111:8443
+> Range: bytes=4017-8120
+> User-Agent: curl/7.52.1
+> Accept: */*
+> 
+* Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+< HTTP/2 200 
+< content-type: text/plain; charset=utf-8
+< content-length: 48
+< date: Thu, 27 Apr 2017 11:43:14 GMT
+< 
+You found me. Pushing my token, did you get it?
+~~~
+
+El servidor que responde dice soportar HTTP/2. Una de las funcionalidades nuevas es el server push, el envio de recursos antes de solicitarlo.
+
+Se realiza la misma petición utilizando un cliente http/2:
+
+~~~
+nghttp https://52.49.91.111:8443/ghost -H "Range: bytes=4017-8120"
+
+You found me. Pushing my token, did you get it?
+YourEffortToRemainWhatYouAreIsWhatLimitsYou
+~~~
+
+Con este cliente podemos ver el token que se había enviado.

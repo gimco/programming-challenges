@@ -1,0 +1,84 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 3</strong> - Board games</h2>
+	<style>
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+</style>
+
+<p>
+	<img style="display: block; margin: 40px auto" src="../resources/img/numbers.jpg" alt="numbers">
+</p>
+
+<p>You can't lie to us, we know you love board games... you absolutely love them, and we also know that you are tired of the typical point counting method.</p>
+<p>We need a cool system for counting points for our brand new board game, and we think we could use cards to do it. But those fancy printed cards don't come cheap and that's why we need you!</p>
+
+<p>We want to know how many cards we need to print, given a maximum possible score. We don't want our board game to have repeated cards, so you need to tell us how many unique cards are needed in order to be able to sum all the numbers from 1 to P, being P the maximum score of the game.</p>
+
+<h3>Input</h3>
+<p>The first line will contain an integer <b>C</b>, the number of cases for our problem.<br>
+Each case consists of a line with the integer <b>P</b>, the maximum points you need to be able to count.
+
+</p><h3>Output</h3>
+<p>For each case, a line starting with "Case #x: " followed by the minimum number of cards required to count from 1 to <b>P</b>.</p>
+
+<h3>Examples</h3>
+
+<table style="width:100%"><tbody><tr>
+<td><pre>Case 1:
+
+1
+</pre></td><td><pre>Case 2:
+
+6
+</pre></td>
+<td><pre>Case 3:
+
+3
+</pre></td>
+</tr></tbody></table>
+
+<p>In Case 1, we need a card with 1.<br>
+In Case 2, we can count until 6 with only 3 cards, for example 1, 2 and 3.<br>
+In Case 3, we need the cards 1 and 2.</p>
+
+<h3>Limits</h3>
+
+<ul>
+<li>1 ≤ <b>C</b> ≤ 10<sup>4</sup></li>
+<li>1 ≤ <b>P</b> ≤ 10<sup>9</sup></li>
+</ul>
+
+<h3>Sample Input</h3>
+
+<pre>3
+1
+6
+3
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>Case #1: 1
+Case #2: 3
+Case #3: 2
+</pre>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
