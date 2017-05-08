@@ -1,4 +1,5 @@
 #!/bin/bash
+# Primer intento con scripting
 
 REPO=/tmp/repo
 cd $REPO

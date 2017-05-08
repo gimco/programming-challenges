@@ -1,0 +1,18 @@
+# Calcular el fichero de secrets por dia
+
+find .git/objects/ \
+		| egrep '[0-9a-f]{38}' \
+		| perl -pe 's:^.*([0-9a-f][0-9a-f])/([0-9a-f]{38}):\1\2:' \
+		| \
+while read hash ; do
+	if [ "$(git cat-file -t $hash)" == "commit" ]; then
+		git show $hash:script.php > script.php
+
+		DATE=$(git show -s --format=%ci $hash)
+		DATE=${DATE:0:10}
+		SECRET1=$(grep -oP '(?<=secret1 = )\d+' script.php)
+		SECRET2=$(grep -oP '(?<=secret2 = )\d+' script.php)
+
+		echo "$DATE $SECRET1 $SECRET2"
+	fi
+done | sort > secrets.txt
