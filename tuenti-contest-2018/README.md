@@ -1,8 +1,8 @@
 # Tuenti Challengue 8
 
-![](resources/logo.svg?raw=true)
+![](resources/logo.png?raw=true)
 
-Soluciones de la séptima edición del [concurso de programación de Tuenti](https://contest.tuenti.net/Info/about) que se celebró entre el 25 de Abril al 2 de Mayo de 2018.
+Soluciones de la octava edición del [concurso de programación de Tuenti](https://contest.tuenti.net/Info/about) que se celebró entre el 25 de Abril al 2 de Mayo de 2018.
 
 * [1. Waffle love](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/01/01.html)
 * [2. Hidden numbers](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/02/02.html)
