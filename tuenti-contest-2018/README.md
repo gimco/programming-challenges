@@ -1,6 +1,6 @@
 # Tuenti Challengue 8
 
-![](resources/img/logo.svg?raw=true)
+![](resources/logo.svg?raw=true)
 
 Soluciones de la séptima edición del [concurso de programación de Tuenti](https://contest.tuenti.net/Info/about) que se celebró entre el 25 de Abril al 2 de Mayo de 2018.
 
