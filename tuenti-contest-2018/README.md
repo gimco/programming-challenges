@@ -14,7 +14,7 @@ Soluciones de la séptima edición del [concurso de programación de Tuenti](htt
 * [8. Security by doorscurity](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/08/08.html)
 * [9. Scrambled Photo](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/09/09.html)
 * [10. Dance](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/010/10.html)
-* [11. Lasers](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/011/11.html)
+* [11. Lasers](https://cdn.rawgit.com/gimco/programming-challenges/master/tuenti-contest-2018/11/11.html)
 * 12. ???
 * 13. ???
 * 14. ???
