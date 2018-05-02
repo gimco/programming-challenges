@@ -1,0 +1,70 @@
+# Unknown cartridge
+
+Hay una imagen de un cartucho de nintendo con un enlace a un fichero unknown. Al analizar el fichero parece ser una rom de gameboy.
+
+
+vba -T 5 unknown.gb
+
+Se hacen capturas de cada scroll.
+Se crea la imagen texto.png
+Se aplica OCR online
+Se corrigen algunos errores
+Se hace base64 des texto:
+
+
+cGlrYWNodSBrYSBrYSBr
+YSBrYSBrYSBwaXBpIHBp
+a2FjaHUga2Ega2Ega2Eg
+a2Ega2Ega2EgcGlwaSBw
+aWthY2h1IHBpa2FjaHUg
+a2Ega2Ega2Ega2EgcGlj
+aHUgcGlrYWNodSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aWNodSBwaWthY2h1IGth
+IGthIGthIGthIGthIHBp
+cGkgcGlrYWNodSBrYSBr
+YSBrYSBrYSBrYSBrYSBr
+YSBwaWthY2h1IHBpIHBp
+IHBpcGkgcGlrYWNodSBw
+aWNodSBwaWthY2h1IHBp
+IHBpcGkgcGlrYWNodSBw
+aSBwaSBwaSBwaWNodSBw
+aWthY2h1IGthIGthIGth
+IGthIGthIHBpcGkgcGlr
+YWNodSBwaSBwaSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aSBwaWNodSBwaWthY2h1
+IHBpIHBpIHBpIHBpIHBp
+IHBpIHBpIHBpIHBpIHBp
+IHBpcGkgcGlwaSBwaXBp
+IGNodSBrYSBwaWNodSBw
+aWNodSBwaWNodSBwaWNo
+dSBwaSBwaSBwaSBwaSBw
+aSBwaSBwaSBwaSBwaSBw
+aSBwaXBpIHBpIHBpIHBp
+IHBpIHBpIHBpIHBpIHBp
+cGkgcGkgcGkgcGkgcGlw
+aSBwaSBwaXBpIHBpa2Eg
+cGkgcGkgcGkgcGkgcGkg
+cGkgcGkgcGkgcGkgcGk=
+
+
+pikachu ka ka ka ka ka pipi pikachu ka ka ka ka ka ka pipi pikachu pikachu ka ka ka ka pichu pikachu pi pi pi pi pi pi pi pi pi pi pi pichu pikachu ka ka ka ka ka pipi pikachu ka ka ka ka ka ka ka pikachu pi pi pipi pikachu pichu pikachu pi pipi pikachu pi pi pi pichu pikachu ka ka ka ka ka pipi pikachu pi pi pi pi pi pi pi pi pi pi pi pi pi pi pi pi pi pi pi pichu pikachu pi pi pi pi pi pi pi pi pi pi pipi pipi pipi chu ka pichu pichu pichu pichu pi pi pi pi pi pi pi pi pi pi pipi pi pi pi pi pi pi pi pipi pi pi pi pipi pi pipi pika pi pi pi pi pi pi pi pi pi pi
+
+Parece ser Pikalang, un lenguaje similar a brainfuck:
+https://esolangs.org/wiki/Pikalang
+
+Si lo traducimos sería el equivalente:
+
+.----->.------>..----<.+++++++++++<.----->.-------.++>.<.+>.+++<.----->.+++++++++++++++++++<.++++++++++>>>]-<<<<++++++++++>+++++++>+++>+>[++++++++++
+
+El código no es ocrrecto, como pista, el cara de picachu está al revés, se prueba el código invertido:
+
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++++++++++.<+++++++++++++++++++.>-----.<+++.>+.<.>++.-------.>-----.<+++++++++++.<----..>------.>-----.
+
+Esto sí genera un texto correcto:
+
+P1K4L4NG_R00LZ

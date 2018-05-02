@@ -1,0 +1,136 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/normalize.css">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 10</strong> - Dance</h2>
+	<style>
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+</style>
+
+<p>After long weeks of struggle you survived the battle against those terrible pagans! A celebration is in order!</p><p>
+
+</p><p>The main event will be a group dance to honor your god and, as 
+the senior dance instructor, you are in charge of organizing it. You're 
+thinking about arranging everyone in a circle with the person at 12 
+o'clock being P<sub>0</sub> and the next person in clockwise order being P<sub>1</sub>, etc.</p>
+
+<p>Everything seemed to be going well during practice until today when 
+you discovered a major oversight on your part: during the highlight of 
+the dance everyone walks up to their partner and does a couple's dance. 
+The tricky part is that partners aren't necessarily adjacent so when two
+ partners walk towards each other they might run into other people!</p>
+
+<p>To complicate matters even more, a person might hate someone and will never accept him/her as their partner.</p>
+
+<p>Now, with just a few days left before the start of the grand festival
+ you want to know how many ways you can pair everyone up so you can 
+decide on the final arrangement.</p>
+
+<h3>Input</h3>
+<p>The first line has an integer <b>C</b>, which is the number of cases for our problem.<br>
+Each case starts with a line with two integers <b>P</b> and <b>G</b>, which are the number of people and the number of grudges. <b>G</b> lines follow, each with two integers <b>A</b> and <b>B</b> that indicate person <b>P<sub>A</sub></b> hates person <b>P<sub>B</sub></b>.</p>
+
+<h3>Output</h3>
+<p>For each case there should be a line starting with "Case #x: " followed by the number of different ways people can be arranged, <strong>modulo 10<sup>9</sup> + 7</strong>. Every line is followed by a new line character.</p>
+
+<h3>Examples</h3>
+
+<table style="width:100%"><tbody><tr>
+<td><pre>Case 1:
+
+2 0
+
+
+
+
+
+</pre></td><td><pre>Case 2:
+
+3 0
+
+
+
+
+
+</pre></td>
+<td><pre>Case 3:
+
+6 0
+
+
+
+
+
+</pre></td>
+<td><pre>Case 4:
+
+8 5
+0 4
+5 0
+6 1
+3 6
+2 7
+</pre></td>
+</tr></tbody></table>
+
+<p>In Case 1 there is only a single way to arrange the two people.<br>
+In Case 2 there is no way to assign partners to three people.<br>
+In Case 3 you can arrange everyone in 5 different ways:</p>
+<p>
+	<img style="display: block; margin: 40px auto" src="../resources/dance6.png" alt="case 3">
+</p>
+
+<p>In Case 4 you can arrange everyone in 7 different ways:</p>
+<p>
+	<img style="display: block; margin: 40px auto" src="../resources/dance8.png" alt="case 4">
+</p>
+
+<h3>Limits</h3>
+
+<ul>
+<li>1 ≤ <b>P</b> ≤ 1000</li>
+<li>1 ≤ <b>G</b> ≤ (<b>P</b> * (<b>P</b> - 1)) / 2</li>
+</ul>
+
+<h3>Sample Input</h3>
+
+<pre>4
+2 0
+3 0
+6 0
+8 5
+0 4
+5 0
+6 1
+3 6
+2 7
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>Case #1: 1
+Case #2: 0
+Case #3: 5
+Case #4: 7
+</pre>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

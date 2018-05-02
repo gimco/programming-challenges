@@ -1,0 +1,161 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/normalize.css">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 8</strong> - Security by doorscurity</h2>
+	<p>
+    Hello agent your mission is to infiltrate a secure research facility
+</p>
+<p>
+    From some intel work, we know some security measures to keep intruders out. In this case the most dangerous ones
+    is hallways filled with a corrosive gas that would fairly quickly penetrate any protection you might bring<br>
+    The hallways are designed to keep people in it long enough for the gas to do its work.
+</p>
+<p>
+    Another operative has managed to get the specifications of the hallway.
+</p>
+<ul>
+    <li>Each hallway has a number of doors</li>
+    <li>Each door opens at a determined interval and remains open for one <i>unit of time</i></li>
+    <li>It takes you one <i>unit of time</i> to cross the space between doors.</li>
+    <li>There is a panel at each end that shows the current state of the hallway.</li>
+</ul>
+<p>
+    In order to survive the hallway with your equipment, you need to 
+find a moment when you can get down it in one go without stopping.
+</p>
+
+<h3>Input</h3>
+<p>
+    The first line has an integer <b>C</b>, which is the number of cases for the problem.<br>
+    Each case starts with a line with an integer <b>D</b>, which is the number of doors in the hallway.<br>
+    <b>D</b> lines follow, two integers <b>P</b> and <b>T</b>, indicating that the door opens every <b>P</b> 
+		units of time and that <b>T</b> units of time have passed since the last time it opened, relative to the
+		time you get to the hallway	(e.g. P = 10, T = 6 means the door will open at 4(10-6) and then every 
+		10 <i>units of time</i>).
+
+</p><h3>Output</h3>
+<p>For each case, there should be a line starting with "Case #x: " 
+followed by the earliest moment in time (relative to your arrival at the
+ hallway panel) when you can go the hallway in one go without stopping, 
+but if that never happens, output <em>NEVER</em>. Every line is followed by a new line character.</p>
+
+<h3>Examples</h3>
+
+<table>
+    <tbody><tr>
+        <td>
+            <pre>Case 1:
+
+2
+7 2
+9 3
+
+
+            </pre>
+        </td>
+        <td>
+            <pre>Case 2:
+
+3
+5 2
+9 3
+7 2
+
+            </pre>
+        </td>
+        <td>
+            <pre>Case 3:
+
+4
+7 2
+23 20
+21 20
+27 3
+            </pre>
+        </td>
+        <td>
+            <pre>Case 4:
+
+4
+59 23
+65 25
+34 15
+9 3
+            </pre>
+        </td>
+    </tr>
+</tbody></table>
+
+<p>
+    In Case 1 the answer is 5, 5 <i>units of time</i> after you arrival you start running, the first door should be open,
+    and the second door opens at 6, just as you are crossing the space between the doors<br>
+    In Case 2 the answer is 248, you cross door 1 at 248, door 2 at 249 and door 3 at 250<br>
+    In Case 3 the answer is <em>NEVER</em><br>
+    In Case 4 the answer is 711399, you cross door 1 at 711399, door 2 at 711400, door 3 at 711401 and door 4 at 711402
+</p>
+
+<h3>Limits</h3>
+
+<ul>
+    <li>2 ≤ <b>D</b> ≤ 100</li>
+    <li>1 ≤ <b>P</b> ≤ 10 000 000</li>
+    <li>0 ≤ <b>T</b> ≤ <b>P</b></li>
+</ul>
+
+<h3>Sample Input</h3>
+<pre>6
+2
+7 3
+8 6
+2
+13 9
+11 7
+3
+22 21
+29 4
+3 1
+4
+7 2
+23 20
+21 12
+27 3
+5
+12 2
+31 21
+41 39
+25 19
+47 31
+6
+37 17
+51 31
+11 7
+53 40
+28 23
+47 37
+</pre>
+
+<h3>Sample Output</h3>
+<pre>Case #1: 25
+Case #2: 69
+Case #3: 111
+Case #4: NEVER
+Case #5: 7669378
+Case #6: 261595237
+</pre>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

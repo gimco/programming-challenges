@@ -1,0 +1,249 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/normalize.css">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 6</strong> - Button Hero</h2>
+	<style>
+    sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
+
+    #button-hero-note-1, #button-hero-note-2 {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        border: 1px solid #333;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+    }
+
+    #button-hero-button {
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        text-align: center;
+        background: red;
+        color: white;
+        font-weight: bold;
+        padding-top: 50px;
+        box-sizing: border-box;
+        border: 1px solid darkred;
+        white-space: nowrap;
+        font-size: 12px;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+        animation-name: button-hero-button;
+    }
+
+    #button-hero-note-1 {
+        left: 200px;
+        top: 20px;
+        background: red;
+        animation-name: button-hero-note-1;
+    }
+
+    #button-hero-note-2 {
+        left: 200px;
+        top: 80px;
+        background: green;
+        animation-name: button-hero-note-2
+    }
+
+    @keyframes button-hero-note-1 {
+        from { left: 200px; }
+        to { left: -360px; }
+    }
+    @keyframes button-hero-note-2 {
+        from { left: 200px }
+        to { left: -80px }
+    }
+
+    @keyframes button-hero-button {
+        0% { background: red; }
+        28.57% { background: red; }
+        28.58% { background: darkred; }
+        42.85% { background: darkred; }
+        42.86% { background: red; }
+        57.14% { background: red; }
+        57.15% { background: darkred; }
+        85.71% { background: darkred; }
+        85.72% { background: red; }
+        100% { background: red; }
+    }
+</style>
+
+<p>You're a game developer and your last project, Button Hero, is almost done!</p><p>
+
+</p><p>Button Hero is a rhythm game where the player has to time key 
+strokes to the rhythm of a song. While in other games players imitate an
+ instrument like a guitar, Button Hero has just one button that has to 
+be pressed and released at the right time to match the notes.</p>
+
+<p>But it's not as easy as it sounds. While the visual cues of other games are straightforward, Button Hero can get pretty crazy:</p>
+<ul>
+<li>There's a single horizontal lane, which starts at position 0, and contains all the notes.</li>
+<li>A note is represented by a colored box of variable length. Each note
+ has points assigned to it that you earn when you hit the note. To hit a
+ note the button has to be pressed exactly when the note starts crossing
+ the start of the lane and released exactly when the note finishes 
+crossing it.</li>
+<li>Each note starts at some position in the lane and moves towards the 
+start of the lane. Notes can have different speeds and can thus overlap 
+each other at different moments of time.</li>
+<li>The notes always reach the start of the lane (notes cannot have a speed of zero)</li>
+<li>The notes arrangements can get pretty crazy. It might not be possible to hit all the notes.</li>
+</ul>
+
+<p>The only thing left to implement is the leaderboard system. You are 
+worried that some people might try to cheat, so you thought of just 
+banning those who submit an impossible score. But to do that you need to
+ know the maximum possible score for every song.</p>
+
+<h3>Input</h3>
+<p>The first line has an integer <b>C</b>, which is the number of cases for our problem.<br>
+Each case starts with a line with an integer <b>N</b>, which is the number of notes. <br>
+<b>N</b> lines follow, each with four integers <b>X</b>, <b>L</b>, <b>S</b>, <b>P</b>, indicating the initial position, length, speed and score of the note.</p>
+
+<h3>Output</h3>
+<p>There should be a line for each case starting with "Case #x: " 
+followed by the maximum score possible. Every line is followed by a new 
+line character.</p>
+
+<h3>Examples</h3>
+
+<table style="width:100%"><tbody><tr>
+<td><pre>Case 1:
+
+2
+4 2 1 1
+4 2 2 2
+
+
+
+</pre></td>
+<td><pre>Case 2:
+
+2
+2 2 2 1
+1 1 1 1
+
+
+
+</pre></td>
+<td><pre>Case 3:
+
+3
+2 1 1 1
+3 1 1 2
+2 2 1 1
+
+
+</pre></td>
+<td><pre>Case 4:
+
+5
+18 2 2 5
+1 2 1 1
+16 10 2 3
+8 10 2 4
+27 6 3 5
+</pre></td>
+</tr></tbody></table>
+
+<p>
+The answer for case 1 is 3 because you can hit both notes. Notice that 
+even though they start at the same position, they reach the start of the
+ lane separately.<br>
+The answer for case 2 is 2 because you can hit both notes at the same time.<br>
+The answer for case 3 is 2, because you can only hit one of the notes 
+and the second one gives you the best score (note that you cannot hit 
+both the first and the second note
+    since you can't press and release the button at the same time).<br>
+The answer for case 4 is 6.<br>
+</p>
+
+<div style="text-align: center">
+    <div style="display: inline-block; vertical-align: middle">
+        <div style="position: relative; width: 320px; height: 180px; overflow: hidden">
+            <div style="position: absolute; top: 160px; left: 34px">0</div>
+            <div style="position: absolute; top: 160px; left: 74px">1</div>
+            <div style="position: absolute; top: 160px; left: 114px">2</div>
+            <div style="position: absolute; top: 160px; left: 154px">3</div>
+            <div style="position: absolute; top: 160px; left: 194px">4</div>
+            <div style="position: absolute; top: 160px; left: 234px">5</div>
+            <div style="position: absolute; top: 160px; left: 274px">6</div>
+            <div style="position: absolute; top: 0px; left: 40px; height: 150px; width: 1px; background: black"></div>
+            <div style="position: absolute; top: 0px; left: 0px; height: 150px; width: 0px; border-right: 1px dashed black"></div>
+            <div style="position: absolute; top: 150px; left: 0px; height: 1px; width: 280px; background: black"></div>
+
+            <div id="button-hero-note-1"></div>
+            <div id="button-hero-note-2"></div>
+        </div>
+    </div>
+    <div style="display: inline-block; vertical-align: middle">
+        <div id="button-hero-button">THE BUTTON</div>
+        <div style="height: 30px"></div>
+    </div>
+    <br>
+    <p>
+        Graphical simulation for case 1
+    </p>
+</div>
+
+<h3>Limits</h3>
+
+<ul>
+<li>1 ≤ <b>C</b> ≤ 100</li>
+<li>1 ≤ <b>N</b> ≤ 10000</li>
+<li>1 ≤ <b>L, S, P</b> ≤ 2<sup>10</sup></li>
+<li>1 ≤ <b>X</b> ≤ 2<sup>30</sup></li>
+<li><b>X</b> and <b>L</b> are divisible by <b>S</b></li>
+</ul>
+
+<h3>Sample Input</h3>
+
+<pre>4
+2
+4 2 1 1
+4 2 2 2
+2
+2 2 2 1
+1 1 1 1
+3
+2 1 1 1
+3 1 1 2
+2 2 1 1
+5
+18 2 2 5
+1 2 1 1
+16 10 2 3
+8 10 2 4
+27 6 3 5
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>Case #1: 3
+Case #2: 2
+Case #3: 2
+Case #4: 6
+</pre>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

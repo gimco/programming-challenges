@@ -1,0 +1,121 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../resources/normalize.css">
+  <link rel="stylesheet" href="../resources/contest.css">
+</head>
+<body>
+
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 1</strong> - Waffle love</h2>
+	<p>
+    Your store, 20 Waffles, is famous for having the most beautiful and delicious waffles in the entire city.
+    You and your staff have put a lot of effort into making sure the shape of your most requested product,
+    the rectangular waffle, is always perfect and that your customers are always happy with them. Sometimes, they even
+    count the number of holes in your waffles. Sometimes they even ask you for help.
+</p>
+
+<p style="text-align: center">
+    <img src="../resources/waffles.jpg">
+</p>
+
+<p>Given each waffle’s number of vertical and horizontal lines, how many holes does it have?</p>
+
+<h3>Input</h3>
+
+<p>
+    The first line has an integer <b>C</b>, which is the number of cases for the problem. Then <b>C</b> lines follow
+    and each one has two integers <b>N</b> and <b>M</b>, which are the number of vertical and horizontal lines
+    on the waffle.
+</p>
+
+<h3>Output</h3>
+
+<p>
+    For each case, there should be a line starting with "Case #x: " followed by the number of holes in the waffle.
+</p>
+
+<h3>Limits</h3>
+
+<ul>
+    <li>1 ≤ <b>C</b> ≤ 100</li>
+    <li>2 ≤ <b>N, M</b> ≤ 10000</li>
+</ul>
+
+
+<h3>Sample Input</h3>
+
+<pre>3
+2 2
+3 2
+4 3
+</pre>
+
+<h3>Sample Output</h3>
+
+<pre>Case #1: 1
+Case #2: 2
+Case #3: 6
+</pre>
+
+<style type="text/css">
+    .waffle {
+        display: inline-block;
+        vertical-align: top;
+        padding: 6px;
+    }
+
+    .waffle table {
+        margin-bottom: 6px;
+        border-radius: 4px;
+        border-spacing: 3px;
+        border-collapse: unset;
+    }
+
+    .waffle td {
+        border-radius: 2px;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .waffle table, td {
+        margin-bottom: 6px;
+        border: 2px solid saddlebrown;
+        background: sandybrown;
+    }
+</style>
+
+<p>Here are some diagrams for the cases above to help you understand the problem better.</p>
+
+<div class="waffle">
+    <table>
+        <tbody><tr><td>1</td></tr>
+    </tbody></table>
+    2x2
+</div>
+<div class="waffle">
+    <table>
+        <tbody><tr><td>1</td><td>2</td></tr>
+    </tbody></table>
+    3x2
+</div>
+<div class="waffle">
+    <table>
+        <tbody><tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+    </tbody></table>
+    4x3
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
